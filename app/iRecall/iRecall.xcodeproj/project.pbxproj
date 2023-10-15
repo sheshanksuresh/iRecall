@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71D507D02ADB823E00C0E457 /* iRecallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507CF2ADB823E00C0E457 /* iRecallApp.swift */; };
+		71D507D22ADB823E00C0E457 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507D12ADB823E00C0E457 /* ContentView.swift */; };
+		71D507D42ADB824500C0E457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D507D32ADB824500C0E457 /* Assets.xcassets */; };
+		71D507D82ADB824500C0E457 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D507D72ADB824500C0E457 /* Preview Assets.xcassets */; };
+		71D507E22ADB824500C0E457 /* iRecallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507E12ADB824500C0E457 /* iRecallTests.swift */; };
+		71D507EC2ADB824500C0E457 /* iRecallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507EB2ADB824500C0E457 /* iRecallUITests.swift */; };
+		71D507EE2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507ED2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71D507DE2ADB824500C0E457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71D507C42ADB823E00C0E457 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71D507CB2ADB823E00C0E457;
+			remoteInfo = iRecall;
+		};
+		71D507E82ADB824500C0E457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71D507C42ADB823E00C0E457 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71D507CB2ADB823E00C0E457;
+			remoteInfo = iRecall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		71D507CC2ADB823E00C0E457 /* iRecall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRecall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D507CF2ADB823E00C0E457 /* iRecallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRecallApp.swift; sourceTree = "<group>"; };
+		71D507D12ADB823E00C0E457 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71D507D32ADB824500C0E457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71D507D52ADB824500C0E457 /* iRecall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRecall.entitlements; sourceTree = "<group>"; };
+		71D507D72ADB824500C0E457 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71D507DD2ADB824500C0E457 /* iRecallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRecallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D507E12ADB824500C0E457 /* iRecallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRecallTests.swift; sourceTree = "<group>"; };
+		71D507E72ADB824500C0E457 /* iRecallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRecallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D507EB2ADB824500C0E457 /* iRecallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRecallUITests.swift; sourceTree = "<group>"; };
+		71D507ED2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRecallUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71D507C92ADB823E00C0E457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71D507DA2ADB824500C0E457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71D507E42ADB824500C0E457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71D507C32ADB823E00C0E457 = {
+			isa = PBXGroup;
+			children = (
+				71D507CE2ADB823E00C0E457 /* iRecall */,
+				71D507E02ADB824500C0E457 /* iRecallTests */,
+				71D507EA2ADB824500C0E457 /* iRecallUITests */,
+				71D507CD2ADB823E00C0E457 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71D507CD2ADB823E00C0E457 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71D507CC2ADB823E00C0E457 /* iRecall.app */,
+				71D507DD2ADB824500C0E457 /* iRecallTests.xctest */,
+				71D507E72ADB824500C0E457 /* iRecallUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71D507CE2ADB823E00C0E457 /* iRecall */ = {
+			isa = PBXGroup;
+			children = (
+				71D507CF2ADB823E00C0E457 /* iRecallApp.swift */,
+				71D507D12ADB823E00C0E457 /* ContentView.swift */,
+				71D507D32ADB824500C0E457 /* Assets.xcassets */,
+				71D507D52ADB824500C0E457 /* iRecall.entitlements */,
+				71D507D62ADB824500C0E457 /* Preview Content */,
+			);
+			path = iRecall;
+			sourceTree = "<group>";
+		};
+		71D507D62ADB824500C0E457 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				71D507D72ADB824500C0E457 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		71D507E02ADB824500C0E457 /* iRecallTests */ = {
+			isa = PBXGroup;
+			children = (
+				71D507E12ADB824500C0E457 /* iRecallTests.swift */,
+			);
+			path = iRecallTests;
+			sourceTree = "<group>";
+		};
+		71D507EA2ADB824500C0E457 /* iRecallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				71D507EB2ADB824500C0E457 /* iRecallUITests.swift */,
+				71D507ED2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift */,
+			);
+			path = iRecallUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71D507CB2ADB823E00C0E457 /* iRecall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71D507F12ADB824500C0E457 /* Build configuration list for PBXNativeTarget "iRecall" */;
+			buildPhases = (
+				71D507C82ADB823E00C0E457 /* Sources */,
+				71D507C92ADB823E00C0E457 /* Frameworks */,
+				71D507CA2ADB823E00C0E457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRecall;
+			productName = iRecall;
+			productReference = 71D507CC2ADB823E00C0E457 /* iRecall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71D507DC2ADB824500C0E457 /* iRecallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71D507F42ADB824500C0E457 /* Build configuration list for PBXNativeTarget "iRecallTests" */;
+			buildPhases = (
+				71D507D92ADB824500C0E457 /* Sources */,
+				71D507DA2ADB824500C0E457 /* Frameworks */,
+				71D507DB2ADB824500C0E457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71D507DF2ADB824500C0E457 /* PBXTargetDependency */,
+			);
+			name = iRecallTests;
+			productName = iRecallTests;
+			productReference = 71D507DD2ADB824500C0E457 /* iRecallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		71D507E62ADB824500C0E457 /* iRecallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71D507F72ADB824500C0E457 /* Build configuration list for PBXNativeTarget "iRecallUITests" */;
+			buildPhases = (
+				71D507E32ADB824500C0E457 /* Sources */,
+				71D507E42ADB824500C0E457 /* Frameworks */,
+				71D507E52ADB824500C0E457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71D507E92ADB824500C0E457 /* PBXTargetDependency */,
+			);
+			name = iRecallUITests;
+			productName = iRecallUITests;
+			productReference = 71D507E72ADB824500C0E457 /* iRecallUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71D507C42ADB823E00C0E457 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					71D507CB2ADB823E00C0E457 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					71D507DC2ADB824500C0E457 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 71D507CB2ADB823E00C0E457;
+					};
+					71D507E62ADB824500C0E457 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 71D507CB2ADB823E00C0E457;
+					};
+				};
+			};
+			buildConfigurationList = 71D507C72ADB823E00C0E457 /* Build configuration list for PBXProject "iRecall" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71D507C32ADB823E00C0E457;
+			productRefGroup = 71D507CD2ADB823E00C0E457 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71D507CB2ADB823E00C0E457 /* iRecall */,
+				71D507DC2ADB824500C0E457 /* iRecallTests */,
+				71D507E62ADB824500C0E457 /* iRecallUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71D507CA2ADB823E00C0E457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71D507D82ADB824500C0E457 /* Preview Assets.xcassets in Resources */,
+				71D507D42ADB824500C0E457 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71D507DB2ADB824500C0E457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71D507E52ADB824500C0E457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71D507C82ADB823E00C0E457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71D507D22ADB823E00C0E457 /* ContentView.swift in Sources */,
+				71D507D02ADB823E00C0E457 /* iRecallApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71D507D92ADB824500C0E457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71D507E22ADB824500C0E457 /* iRecallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71D507E32ADB824500C0E457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71D507EC2ADB824500C0E457 /* iRecallUITests.swift in Sources */,
+				71D507EE2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71D507DF2ADB824500C0E457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71D507CB2ADB823E00C0E457 /* iRecall */;
+			targetProxy = 71D507DE2ADB824500C0E457 /* PBXContainerItemProxy */;
+		};
+		71D507E92ADB824500C0E457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71D507CB2ADB823E00C0E457 /* iRecall */;
+			targetProxy = 71D507E82ADB824500C0E457 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		71D507EF2ADB824500C0E457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71D507F02ADB824500C0E457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		71D507F22ADB824500C0E457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iRecall/iRecall.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iRecall/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sheshank.iRecall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71D507F32ADB824500C0E457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iRecall/iRecall.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iRecall/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sheshank.iRecall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		71D507F52ADB824500C0E457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sheshank.iRecallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRecall.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iRecall";
+			};
+			name = Debug;
+		};
+		71D507F62ADB824500C0E457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sheshank.iRecallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRecall.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iRecall";
+			};
+			name = Release;
+		};
+		71D507F82ADB824500C0E457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sheshank.iRecallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iRecall;
+			};
+			name = Debug;
+		};
+		71D507F92ADB824500C0E457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sheshank.iRecallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iRecall;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71D507C72ADB823E00C0E457 /* Build configuration list for PBXProject "iRecall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71D507EF2ADB824500C0E457 /* Debug */,
+				71D507F02ADB824500C0E457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71D507F12ADB824500C0E457 /* Build configuration list for PBXNativeTarget "iRecall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71D507F22ADB824500C0E457 /* Debug */,
+				71D507F32ADB824500C0E457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71D507F42ADB824500C0E457 /* Build configuration list for PBXNativeTarget "iRecallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71D507F52ADB824500C0E457 /* Debug */,
+				71D507F62ADB824500C0E457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71D507F72ADB824500C0E457 /* Build configuration list for PBXNativeTarget "iRecallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71D507F82ADB824500C0E457 /* Debug */,
+				71D507F92ADB824500C0E457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71D507C42ADB823E00C0E457 /* Project object */;
+}
