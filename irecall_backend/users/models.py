@@ -7,6 +7,3 @@ class UserProfile(AbstractUser):
     study_hours = models.PositiveIntegerField(default=0)
     streak_days = models.PositiveIntegerField(default=0)
     
-
-
-

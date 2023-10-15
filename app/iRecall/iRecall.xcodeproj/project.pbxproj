@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7108EFE62ADC6925002FDC7F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108EFE52ADC6925002FDC7F /* RegistrationView.swift */; };
+		7108EFE82ADC73D8002FDC7F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108EFE72ADC73D8002FDC7F /* ImagePicker.swift */; };
 		71D507D02ADB823E00C0E457 /* iRecallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507CF2ADB823E00C0E457 /* iRecallApp.swift */; };
 		71D507D22ADB823E00C0E457 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507D12ADB823E00C0E457 /* ContentView.swift */; };
 		71D507D42ADB824500C0E457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D507D32ADB824500C0E457 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7108EFE52ADC6925002FDC7F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		7108EFE72ADC73D8002FDC7F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		71D507CC2ADB823E00C0E457 /* iRecall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRecall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D507CF2ADB823E00C0E457 /* iRecallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRecallApp.swift; sourceTree = "<group>"; };
 		71D507D12ADB823E00C0E457 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				71D507CF2ADB823E00C0E457 /* iRecallApp.swift */,
 				71D507D12ADB823E00C0E457 /* ContentView.swift */,
+				7108EFE52ADC6925002FDC7F /* RegistrationView.swift */,
+				7108EFE72ADC73D8002FDC7F /* ImagePicker.swift */,
 				71D507D32ADB824500C0E457 /* Assets.xcassets */,
 				71D507D52ADB824500C0E457 /* iRecall.entitlements */,
 				71D507D62ADB824500C0E457 /* Preview Content */,
@@ -264,7 +270,9 @@
 			files = (
 				71D507FB2ADB881200C0E457 /* NetworkManager.swift in Sources */,
 				71D507D22ADB823E00C0E457 /* ContentView.swift in Sources */,
+				7108EFE82ADC73D8002FDC7F /* ImagePicker.swift in Sources */,
 				71D507D02ADB823E00C0E457 /* iRecallApp.swift in Sources */,
+				7108EFE62ADC6925002FDC7F /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

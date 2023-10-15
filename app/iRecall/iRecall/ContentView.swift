@@ -8,37 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var username: String = ""
-    @State private var password: String = ""
-    @State private var isLoginView: Bool = true
-    
     var body: some View {
-        NavigationView{
-            VStack {
-                TextField("Username", text: $username)
+        VStack(spacing: 20) {
+            Image("irecall_logo")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 200)
+            
+            Button(action: {
+                // TODO: Login action logic
+            }) {
+                Text("Login")
                     .padding()
-                    .background(Color(.secondarySystemFill))
+                    .background(Color.green)
+                    .foregroundColor(.white)
                     .cornerRadius(8)
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(Color(.secondarySystemFill))
-                    .cornerRadius(8)
-                
-                if isLoginView {
-                    Button("Login"){
-                        // TODO: Login Logic
-                    }.padding()
-                    
-                    Button("Switch to Register") {
-                        isLoginView.toggle()
-                    }.padding()
-                } else {
-                    Button("Register") {
-                        isLoginView.toggle()
-                    }.padding()
-                }
             }
-        }
+            
+            Button(action: {
+                // TODO: Register action logic
+            }) {
+                Text("Register")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
+        }.padding()
     }
 }
 
