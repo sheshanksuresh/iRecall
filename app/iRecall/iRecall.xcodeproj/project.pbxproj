@@ -17,6 +17,7 @@
 		71D507EC2ADB824500C0E457 /* iRecallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507EB2ADB824500C0E457 /* iRecallUITests.swift */; };
 		71D507EE2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507ED2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift */; };
 		71D507FB2ADB881200C0E457 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507FA2ADB881200C0E457 /* NetworkManager.swift */; };
+		E810D0CD2ADC8E5500CD9981 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810D0CC2ADC8E5500CD9981 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		71D507EB2ADB824500C0E457 /* iRecallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRecallUITests.swift; sourceTree = "<group>"; };
 		71D507ED2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRecallUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		71D507FA2ADB881200C0E457 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E810D0CC2ADC8E5500CD9981 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E810D0CE2ADCA46300CD9981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +104,10 @@
 		71D507CE2ADB823E00C0E457 /* iRecall */ = {
 			isa = PBXGroup;
 			children = (
+				E810D0CE2ADCA46300CD9981 /* Info.plist */,
 				71D507CF2ADB823E00C0E457 /* iRecallApp.swift */,
 				71D507D12ADB823E00C0E457 /* ContentView.swift */,
+				E810D0CC2ADC8E5500CD9981 /* LoginView.swift */,
 				7108EFE52ADC6925002FDC7F /* RegistrationView.swift */,
 				7108EFE72ADC73D8002FDC7F /* ImagePicker.swift */,
 				71D507D32ADB824500C0E457 /* Assets.xcassets */,
@@ -268,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E810D0CD2ADC8E5500CD9981 /* LoginView.swift in Sources */,
 				71D507FB2ADB881200C0E457 /* NetworkManager.swift in Sources */,
 				71D507D22ADB823E00C0E457 /* ContentView.swift in Sources */,
 				7108EFE82ADC73D8002FDC7F /* ImagePicker.swift in Sources */,
@@ -365,6 +371,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -419,6 +426,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -434,6 +442,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iRecall/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iRecall/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -451,7 +460,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sheshank.iRecall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -470,6 +479,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iRecall/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iRecall/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -487,7 +497,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sheshank.iRecall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

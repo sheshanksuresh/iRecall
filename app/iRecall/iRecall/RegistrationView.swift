@@ -19,6 +19,10 @@ struct RegistrationView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     
+    @State private var showingAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    
     var body: some View {
         VStack(spacing: 20) {
             if profileImage != nil {
@@ -58,7 +62,7 @@ struct RegistrationView: View {
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
             
-            TextField("Password", text: $password)
+            SecureField("Password", text: $password)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
@@ -69,7 +73,7 @@ struct RegistrationView: View {
                 .cornerRadius(8)
             
             Button(action: {
-                // TODO: Registration Logic
+                registerUser()
             }) {
                 Text("Register")
                     .padding()
@@ -82,11 +86,71 @@ struct RegistrationView: View {
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage, content: {
             ImagePicker(image: self.$inputImage)
         })
+        .alert(isPresented: $showingAlert, content: {
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        })
     }
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
         profileImage = Image(uiImage: inputImage)
+    }
+    
+    func registerUser() {
+        let boundary = UUID().uuidString
+        var request = URLRequest(url: URL(string: "http://127.0.0.1:8000/users/register/")!)
+        request.httpMethod = "POST"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        var body = Data()
+        
+        let params = [
+            "username": username,
+            "password": password,
+            "email": email,
+            "first_name": firstName,
+            "last_name": lastName,
+            "bio": bio
+        ]
+        for (key, value) in params {
+            body.append("--\(boundary)\r\n".data(using: .utf8)!)
+            body.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".data(using: .utf8)!)
+            body.append("\(value)\r\n".data(using: .utf8)!)
+        }
+        
+        if let imageData = inputImage?.jpegData(compressionQuality: 1.0) {
+            let uniqueFileName = UUID().uuidString + ".jpg"
+            body.append("--\(boundary)\r\n".data(using: .utf8)!)
+            body.append("Content-Disposition: form-data; name=\"profile_picture\"; filename=\"\(uniqueFileName)\"\r\n".data(using: .utf8)!)
+            body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+            body.append(imageData)
+            body.append("\r\n".data(using: .utf8)!)
+        }
+        
+        body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+        
+        request.httpBody = body
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                self.alertTitle = "Error"
+                self.alertMessage = "Failed to register. \(error.localizedDescription)"
+                self.showingAlert = true
+                return
+            }
+            
+            guard let _ = data, let response = response as? HTTPURLResponse else { return }
+            
+            if response.statusCode == 200 {
+                self.alertTitle = "Success"
+                self.alertMessage = "Register Successfully!"
+                self.showingAlert = true
+            } else {
+                self.alertTitle = "Registration Failed"
+                self.alertMessage = "An error occured. Please try again."
+                self.showingAlert = true
+            }
+        }.resume()
     }
 }
 

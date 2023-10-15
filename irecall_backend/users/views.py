@@ -1,5 +1,6 @@
 from rest_framework.response import Response
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes, parser_classes
+from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.permissions import IsAuthenticated
@@ -7,6 +8,7 @@ from rest_framework import status
 from .serializers import UserRegistrationSerializer, UserProfileSerializer
 
 @api_view(['POST'])
+@parser_classes((MultiPartParser, FormParser))
 def register(request):
     serializer = UserRegistrationSerializer(data=request.data)
     if serializer.is_valid():
