@@ -14,6 +14,7 @@
 		71D507E22ADB824500C0E457 /* iRecallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507E12ADB824500C0E457 /* iRecallTests.swift */; };
 		71D507EC2ADB824500C0E457 /* iRecallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507EB2ADB824500C0E457 /* iRecallUITests.swift */; };
 		71D507EE2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507ED2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift */; };
+		71D507FB2ADB881200C0E457 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507FA2ADB881200C0E457 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		71D507E72ADB824500C0E457 /* iRecallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRecallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D507EB2ADB824500C0E457 /* iRecallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRecallUITests.swift; sourceTree = "<group>"; };
 		71D507ED2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRecallUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71D507FA2ADB881200C0E457 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				71D507D32ADB824500C0E457 /* Assets.xcassets */,
 				71D507D52ADB824500C0E457 /* iRecall.entitlements */,
 				71D507D62ADB824500C0E457 /* Preview Content */,
+				71D507FA2ADB881200C0E457 /* NetworkManager.swift */,
 			);
 			path = iRecall;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D507FB2ADB881200C0E457 /* NetworkManager.swift in Sources */,
 				71D507D22ADB823E00C0E457 /* ContentView.swift in Sources */,
 				71D507D02ADB823E00C0E457 /* iRecallApp.swift in Sources */,
 			);
