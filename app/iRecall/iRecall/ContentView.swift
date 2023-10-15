@@ -24,7 +24,6 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .cornerRadius(8)
             }
-            
             Button(action: {
                 // TODO: Register action logic
             }) {
