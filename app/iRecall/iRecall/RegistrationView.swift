@@ -131,10 +131,10 @@ struct RegistrationView: View {
         
         request.httpBody = body
         
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 self.alertTitle = "Error"
-                self.alertMessage = "Failed to register. \(error.localizedDescription)"
+                self.alertMessage = "Registration failed. \(error.localizedDescription)"
                 self.showingAlert = true
                 return
             }
@@ -143,7 +143,7 @@ struct RegistrationView: View {
             
             if response.statusCode == 200 {
                 self.alertTitle = "Success"
-                self.alertMessage = "Register Successfully!"
+                self.alertMessage = "Registered Successfully!"
                 self.showingAlert = true
             } else {
                 self.alertTitle = "Registration Failed"
