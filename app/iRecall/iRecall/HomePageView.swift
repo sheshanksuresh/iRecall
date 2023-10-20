@@ -70,14 +70,15 @@ struct CalendarView: View {
             }
             
             ForEach(0..<numberOfWeeksInCurrentMonth, id: \.self) { week in
-                HStack {
+                HStack(spacing: 0) {
                     ForEach(0..<7, id: \.self) { day in
                         if let currentDay = dateForCell(week: week, day: day) {
                             Button(action: {
                                 selectedDate = currentDay
                             }) {
                                 Text(String(calendar.component(.day, from: currentDay)))
-                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                                    .font(.system(size: 16))
+                                    .frame(width: 26, height: 26)
                                     .padding()
                                     .background(
                                         Calendar.current.isDate(selectedDate, equalTo: currentDay, toGranularity: .day) ?
@@ -91,7 +92,8 @@ struct CalendarView: View {
                             }
                         } else {
                             Text("")
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                                .padding()
+                                .frame(width: 26, height: 26)
                         }
                     }
                 }
