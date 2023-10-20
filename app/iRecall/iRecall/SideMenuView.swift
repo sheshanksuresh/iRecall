@@ -24,6 +24,7 @@ struct SideMenuView: View {
                 Text("Home Page")
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                    .foregroundColor(.white)
             }
             
             Button(action: {
@@ -35,6 +36,7 @@ struct SideMenuView: View {
                 Text("Topics")
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                    .foregroundColor(.white)
             }
             
             Button(action: {
@@ -46,12 +48,13 @@ struct SideMenuView: View {
                 Text("The Forgetting Curve")
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                    .foregroundColor(.white)
             }
             
             Spacer()
         }
         .frame(width: 250)
-        .background(Color.gray.opacity(0.2))
+        .background(Color.blue)
         .offset(y: bannerHeight)
     }
 }
