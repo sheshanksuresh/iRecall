@@ -57,7 +57,7 @@ struct CalendarView: View {
     let calendar = Calendar.current
     
     var body: some View {
-        VStack(alignment: .center, spacing: 10) {
+        VStack(alignment: .center) {
 
             Text(currentMonthAndYear)
                 .font(.headline)
@@ -93,7 +93,7 @@ struct CalendarView: View {
                         } else {
                             Text("")
                                 .padding()
-                                .frame(width: 26, height: 26)
+                                .frame(width: 26 + 31, height: 26 + 31)
                         }
                     }
                 }
