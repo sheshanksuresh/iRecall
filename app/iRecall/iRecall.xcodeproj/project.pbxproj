@@ -18,6 +18,11 @@
 		71D507EE2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507ED2ADB824500C0E457 /* iRecallUITestsLaunchTests.swift */; };
 		71D507FB2ADB881200C0E457 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D507FA2ADB881200C0E457 /* NetworkManager.swift */; };
 		E810D0CD2ADC8E5500CD9981 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810D0CC2ADC8E5500CD9981 /* LoginView.swift */; };
+		E810D0D12ADCD15B00CD9981 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E810D0D02ADCD15B00CD9981 /* KeychainSwift */; };
+		E810D0D32ADCD35B00CD9981 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810D0D22ADCD35B00CD9981 /* HomePageView.swift */; };
+		E810D0D52ADCDA3D00CD9981 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810D0D42ADCDA3D00CD9981 /* MainView.swift */; };
+		E810D0D72ADCDA9F00CD9981 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810D0D62ADCDA9F00CD9981 /* HomeView.swift */; };
+		E810D0D92ADCDB6800CD9981 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810D0D82ADCDB6800CD9981 /* SideMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,10 @@
 		71D507FA2ADB881200C0E457 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E810D0CC2ADC8E5500CD9981 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E810D0CE2ADCA46300CD9981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E810D0D22ADCD35B00CD9981 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		E810D0D42ADCDA3D00CD9981 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E810D0D62ADCDA9F00CD9981 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E810D0D82ADCDB6800CD9981 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E810D0D12ADCD15B00CD9981 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +118,10 @@
 				71D507CF2ADB823E00C0E457 /* iRecallApp.swift */,
 				71D507D12ADB823E00C0E457 /* ContentView.swift */,
 				E810D0CC2ADC8E5500CD9981 /* LoginView.swift */,
+				E810D0D22ADCD35B00CD9981 /* HomePageView.swift */,
+				E810D0D42ADCDA3D00CD9981 /* MainView.swift */,
+				E810D0D62ADCDA9F00CD9981 /* HomeView.swift */,
+				E810D0D82ADCDB6800CD9981 /* SideMenuView.swift */,
 				7108EFE52ADC6925002FDC7F /* RegistrationView.swift */,
 				7108EFE72ADC73D8002FDC7F /* ImagePicker.swift */,
 				71D507D32ADB824500C0E457 /* Assets.xcassets */,
@@ -159,6 +173,9 @@
 			dependencies = (
 			);
 			name = iRecall;
+			packageProductDependencies = (
+				E810D0D02ADCD15B00CD9981 /* KeychainSwift */,
+			);
 			productName = iRecall;
 			productReference = 71D507CC2ADB823E00C0E457 /* iRecall.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +248,9 @@
 				Base,
 			);
 			mainGroup = 71D507C32ADB823E00C0E457;
+			packageReferences = (
+				E810D0CF2ADCD15B00CD9981 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 71D507CD2ADB823E00C0E457 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,11 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E810D0D72ADCDA9F00CD9981 /* HomeView.swift in Sources */,
 				E810D0CD2ADC8E5500CD9981 /* LoginView.swift in Sources */,
+				E810D0D92ADCDB6800CD9981 /* SideMenuView.swift in Sources */,
+				E810D0D52ADCDA3D00CD9981 /* MainView.swift in Sources */,
 				71D507FB2ADB881200C0E457 /* NetworkManager.swift in Sources */,
 				71D507D22ADB823E00C0E457 /* ContentView.swift in Sources */,
 				7108EFE82ADC73D8002FDC7F /* ImagePicker.swift in Sources */,
 				71D507D02ADB823E00C0E457 /* iRecallApp.swift in Sources */,
+				E810D0D32ADCD35B00CD9981 /* HomePageView.swift in Sources */,
 				7108EFE62ADC6925002FDC7F /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +655,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E810D0CF2ADCD15B00CD9981 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E810D0D02ADCD15B00CD9981 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E810D0CF2ADCD15B00CD9981 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71D507C42ADB823E00C0E457 /* Project object */;
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import KeychainSwift
 
 struct LoginView: View {
     @State private var username: String = ""
@@ -65,7 +66,8 @@ struct LoginView: View {
                     if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
                        let dictionary = jsonObject as? [String: String],
                        let token = dictionary["token"] {
-                        print(token) // TODO: Save as keychain for security, keeping to debug for now
+                        let keychain = KeychainSwift()
+                        keychain.set(token, forKey: "userToken")
                     }
                     self.alertTitle = "Success"
                     self.alertMessage = "Logged in successfully!"
