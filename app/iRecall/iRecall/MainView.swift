@@ -10,9 +10,10 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        NavigationView {
-            HomeView()
-                .navigationBarTitle("Memory Retention App", displayMode: .inline)
-        }
+        HomeView()
     }
+}
+
+#Preview {
+    MainView()
 }

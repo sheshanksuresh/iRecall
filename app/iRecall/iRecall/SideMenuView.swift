@@ -9,9 +9,16 @@ import Foundation
 import SwiftUI
 
 struct SideMenuView: View {
+    @Binding var isMenuOpen: Bool
+    let bannerHeight: CGFloat = 50
+    
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 10) {
+            
             Button(action: {
+                withAnimation {
+                    isMenuOpen = false
+                }
                 // TODO: Transition to Home page
             }) {
                 Text("Home Page")
@@ -20,6 +27,9 @@ struct SideMenuView: View {
             }
             
             Button(action: {
+                withAnimation {
+                    isMenuOpen = false
+                }
                 // TODO: Transition to topics page
             }) {
                 Text("Topics")
@@ -28,6 +38,9 @@ struct SideMenuView: View {
             }
             
             Button(action: {
+                withAnimation {
+                    isMenuOpen = false
+                }
                 // TODO: Transition to forgetting curve page
             }) {
                 Text("The Forgetting Curve")
@@ -39,9 +52,10 @@ struct SideMenuView: View {
         }
         .frame(width: 250)
         .background(Color.gray.opacity(0.2))
+        .offset(y: bannerHeight)
     }
 }
 
 #Preview {
-    SideMenuView()
+    SideMenuView(isMenuOpen: .constant(false))
 }

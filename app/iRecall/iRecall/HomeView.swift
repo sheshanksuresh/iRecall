@@ -12,11 +12,11 @@ struct HomeView: View {
     @State private var isMenuOpen: Bool = false
     
     var body: some View {
-        ZStack {
-            HomePageView()
+        ZStack (alignment: .leading) {
+            HomePageView(isMenuOpen: $isMenuOpen)
             
             if isMenuOpen {
-                SideMenuView()
+                SideMenuView(isMenuOpen: $isMenuOpen)
                     .transition(.move(edge: .leading))
             }
         }
@@ -29,3 +29,8 @@ struct HomeView: View {
         })
     }
 }
+
+#Preview {
+    HomeView()
+}
+
