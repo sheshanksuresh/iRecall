@@ -11,19 +11,28 @@ import SwiftUI
 struct HomePageView: View {
     @Binding var isMenuOpen: Bool
     @State private var selectedDate: Date = Date()
+    @State private var isDatePickerPresented: Bool = false
+    @State private var selectedMonth: Int = Calendar.current.component(.month, from: Date())
+    @State private var selectedYear: Int = Calendar.current.component(.year, from: Date())
     
     var body: some View {
-        VStack {
-            // Menu
-            BannerView(isMenuOpen: $isMenuOpen)
-            
-            Spacer()
-            
-            // Calendar and Topics
+        ZStack {
             VStack {
-                CalendarView(selectedDate: $selectedDate)
-                Divider()
-                Text ("Today's Topics Placeholder")
+                // Menu
+                BannerView(isMenuOpen: $isMenuOpen)
+                
+                Spacer()
+                
+                // Calendar and Topics
+                VStack {
+                    CalendarView(selectedDate: $selectedDate, selectedMonth: $selectedMonth, selectedYear: $selectedYear, isDatePickerPresented: $isDatePickerPresented)
+                    Divider()
+                    Text ("Today's Topics Placeholder")
+                }
+            }
+            
+            if isDatePickerPresented {
+                DatePickerView(selectedMonth: $selectedMonth, selectedYear: $selectedYear, isDatePickerPresented: $isDatePickerPresented)
             }
         }
     }
@@ -53,14 +62,27 @@ struct BannerView: View {
 
 struct CalendarView: View {
     @Binding var selectedDate: Date
+    @Binding var selectedMonth: Int
+    @Binding var selectedYear: Int
+    @Binding var isDatePickerPresented: Bool
     let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     let calendar = Calendar.current
     
     var body: some View {
         VStack(alignment: .center) {
-
-            Text(currentMonthAndYear)
-                .font(.headline)
+            Button(action: {
+                isDatePickerPresented.toggle()
+            }) {
+                Text(currentMonthAndYear)
+                    .font(.headline)
+                    .padding(8)
+                    .background(Color.gray.opacity(0.2))
+                    .foregroundColor(.black)
+                    .cornerRadius(8)
+            }
+            .popover(isPresented: $isDatePickerPresented, content: {
+                DatePickerView(selectedMonth: $selectedMonth, selectedYear: $selectedYear, isDatePickerPresented: .constant(true))
+            })
             
             HStack {
                 ForEach(daysOfWeek, id: \.self) { day in
@@ -102,15 +124,19 @@ struct CalendarView: View {
     }
     
     var currentMonthAndYear: String {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM yyyy"
-        return formatter.string(from: date)
+        let dateComponents = DateComponents(year: selectedYear, month: selectedMonth)
+        if let date = calendar.date(from: dateComponents) {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMMM yyyy"
+            return formatter.string(from: date)
+        } else {
+            return "Invalid Date"
+        }
     }
     
     var numberOfWeeksInCurrentMonth: Int {
         let calendar = Calendar.current
-        let range = calendar.range(of: .weekOfMonth, in: .month, for: Date())!
+//        let range = calendar.range(of: .weekOfMonth, in: .month, for: Date())!
         let firstDayOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: Date()))!
         let firstWeekday = calendar.component(.weekday, from: firstDayOfMonth)
         let daysInMonth = calendar.range(of: .day, in: .month, for: Date())!.count
@@ -126,7 +152,7 @@ struct CalendarView: View {
     func dateForCell(week: Int, day: Int) -> Date? {
         let firstOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: Date()))!
         let firstWeekday = calendar.component(.weekday, from: firstOfMonth)
-        var dayOffset = (week * 7) + day - (firstWeekday - 1)
+        let dayOffset = (week * 7) + day - (firstWeekday - 1)
         if dayOffset < 0 || dayOffset >= daysInCurrentMonth {
             return nil
         }
@@ -134,6 +160,54 @@ struct CalendarView: View {
     }
 }
 
+struct DatePickerView: View {
+    @Binding var selectedMonth: Int
+    @Binding var selectedYear: Int
+    @Binding var isDatePickerPresented: Bool
+    
+    var months: [String] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    let years: [String] = Array(2000...2100).map { String($0) }
+    
+    var body: some View {
+        VStack (spacing: 20){
+            HStack {
+                Button("Cancel") {
+                    isDatePickerPresented = false
+                }
+                Spacer()
+                Button("Done") {
+                    isDatePickerPresented = false
+                }
+            }
+            .padding()
+            
+            Divider()
+            
+            HStack {
+                Picker(selection: $selectedMonth, label: Text("")) {
+                    ForEach(months, id: \.self) { month in
+                        Text(month).tag(Int(month) ?? 1)
+                    }
+                }
+                .frame(width: UIScreen.main.bounds.width/2)
+                .clipped()
+                
+                Picker(selection: $selectedYear, label: Text("")) {
+                    ForEach(years, id: \.self) { year in
+                        Text(year).tag(Int(year) ?? 1)
+                    }
+                }
+                .frame(width: UIScreen.main.bounds.width/2)
+                .clipped()
+            }
+        }
+        .background(Color.white)
+        .cornerRadius(20)
+        .frame(height: UIScreen.main.bounds.height/2)
+        .offset(y: isDatePickerPresented ? UIScreen.main.bounds.height/4 : UIScreen.main.bounds.height)
+        .animation(.easeInOut(duration: 0.3))
+    }
+}
 #Preview {
     HomePageView(isMenuOpen: .constant(false))
 }
