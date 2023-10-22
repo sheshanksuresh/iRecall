@@ -32,6 +32,13 @@ struct HomePageView: View {
             }
             
             if isDatePickerPresented {
+                Color.black.opacity(0.4)
+                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .onTapGesture {
+                        withAnimation {
+                            isDatePickerPresented.toggle()
+                        }
+                    }
                 DatePickerView(selectedMonth: $selectedMonth, selectedYear: $selectedYear, isDatePickerPresented: $isDatePickerPresented)
             }
         }
@@ -80,10 +87,7 @@ struct CalendarView: View {
                     .foregroundColor(.black)
                     .cornerRadius(8)
             }
-            .popover(isPresented: $isDatePickerPresented, content: {
-                DatePickerView(selectedMonth: $selectedMonth, selectedYear: $selectedYear, isDatePickerPresented: .constant(true))
-            })
-            
+
             HStack {
                 ForEach(daysOfWeek, id: \.self) { day in
                     Text(day)
@@ -136,8 +140,8 @@ struct CalendarView: View {
     
     var numberOfWeeksInCurrentMonth: Int {
         let calendar = Calendar.current
-//        let range = calendar.range(of: .weekOfMonth, in: .month, for: Date())!
-        let firstDayOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: Date()))!
+        let dateComponents = DateComponents(year: selectedYear, month: selectedMonth)
+        let firstDayOfMonth = calendar.date(from: dateComponents)!
         let firstWeekday = calendar.component(.weekday, from: firstDayOfMonth)
         let daysInMonth = calendar.range(of: .day, in: .month, for: Date())!.count
         return firstWeekday + daysInMonth <= 36 ? 5 : 6
@@ -145,12 +149,15 @@ struct CalendarView: View {
     
     var daysInCurrentMonth: Int {
         let calendar = Calendar.current
-        let range = calendar.range(of: .day, in: .month, for: Date())!
+        let dateComponents = DateComponents(year: selectedYear, month: selectedMonth)
+        let date = calendar.date(from: dateComponents)!
+        let range = calendar.range(of: .day, in: .month, for: date)!
         return range.count
     }
     
     func dateForCell(week: Int, day: Int) -> Date? {
-        let firstOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: Date()))!
+        let dateComponents = DateComponents(year: selectedYear, month: selectedMonth)
+        let firstOfMonth = calendar.date(from: dateComponents)!
         let firstWeekday = calendar.component(.weekday, from: firstOfMonth)
         let dayOffset = (week * 7) + day - (firstWeekday - 1)
         if dayOffset < 0 || dayOffset >= daysInCurrentMonth {
@@ -185,8 +192,8 @@ struct DatePickerView: View {
             
             HStack {
                 Picker(selection: $selectedMonth, label: Text("")) {
-                    ForEach(months, id: \.self) { month in
-                        Text(month).tag(Int(month) ?? 1)
+                    ForEach(0..<months.count, id: \.self) { index in
+                        Text(months[index]).tag(index + 1)
                     }
                 }
                 .frame(width: UIScreen.main.bounds.width/2)
@@ -204,8 +211,6 @@ struct DatePickerView: View {
         .background(Color.white)
         .cornerRadius(20)
         .frame(height: UIScreen.main.bounds.height/2)
-        .offset(y: isDatePickerPresented ? UIScreen.main.bounds.height/4 : UIScreen.main.bounds.height)
-        .animation(.easeInOut(duration: 0.3))
     }
 }
 #Preview {
